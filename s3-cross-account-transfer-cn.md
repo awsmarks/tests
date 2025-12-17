@@ -1,5 +1,7 @@
 # S3 跨账户数据传输指南
 
+> 🌐 [English Version](./s3-cross-account-transfer.md)
+
 ## 概述
 
 本文档介绍如何在不同 AWS 账户、区域和 VPC 之间安全传输 S3 数据。所有方法均保持流量在 AWS 内部网络中传输。
