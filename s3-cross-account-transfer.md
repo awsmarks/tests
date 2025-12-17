@@ -1,5 +1,7 @@
 # S3 Cross-Account Data Transfer Guide
 
+> 🌐 [中文版本 (Chinese Version)](./s3-cross-account-transfer-cn.md)
+
 ## Overview
 
 This document describes how to securely transfer data between S3 buckets across different AWS accounts, regions, and VPCs. All methods keep traffic within AWS's internal network.
