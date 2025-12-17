@@ -166,10 +166,10 @@ Need to transfer S3 data?
 ### S3 Batch Operations
 | Item | Value |
 |------|-------|
-| Job ID | `64d1c633-c4ab-46e8-9906-dbe499ee6af5` |
+| Job ID | `00000000-0000-0000-0000-000000000001` |
 | Region | ap-northeast-1 |
-| Source | ss-cross-acct-test (Account 767397876447) |
-| Destination | ss-cross-acct-accept (Account 127214164714) |
+| Source | source-bucket (Account 111111111111) |
+| Destination | dest-bucket (Account 222222222222) |
 | Status | ✅ Complete (2/2 tasks) |
 
 **Key Lesson:** Batch job must be created in same region as source bucket.
@@ -177,8 +177,8 @@ Need to transfer S3 data?
 ### S3 Replication
 | Item | Value |
 |------|-------|
-| Source | ss-cross-acct-test (Account 767397876447) |
-| Destination | ss-cross-acct-accept (Account 127214164714) |
+| Source | source-bucket (Account 111111111111) |
+| Destination | dest-bucket (Account 222222222222) |
 | Prefix | `replicate/` |
 | Status | ✅ COMPLETED |
 
@@ -187,9 +187,9 @@ Need to transfer S3 data?
 ### DataSync
 | Item | Value |
 |------|-------|
-| Task ARN | `task-0467e69aaf92a1a2b` |
-| Source | ss-cross-acct-test/datasync-test/ |
-| Destination | ss-cross-acct-accept/datasync-dest/ |
+| Task ARN | `task-0abc1234567890def` |
+| Source | source-bucket/datasync-test/ |
+| Destination | dest-bucket/datasync-dest/ |
 | Status | ✅ SUCCESS (1 file, 50 bytes) |
 
 **Key Lesson:** DataSync role needs `s3:DeleteObject` permission; creates `.aws-datasync/` metadata folder.
@@ -197,15 +197,15 @@ Need to transfer S3 data?
 ### Gateway Endpoint
 | Item | Value |
 |------|-------|
-| Endpoint ID | vpce-00df0cd8226408340 |
-| VPC | vpc-0ca8540233182736a |
+| Endpoint ID | vpce-0gw12345678901234 |
+| VPC | vpc-0abc1234567890def |
 | Status | ✅ Available |
 
 ### Interface Endpoint
 | Item | Value |
 |------|-------|
-| Endpoint ID | vpce-042a2b36f62dbd782 |
-| ENI IP | 10.0.0.93 |
+| Endpoint ID | vpce-0if12345678901234 |
+| ENI IP | 10.0.0.100 |
 | Status | ✅ Available |
 
 ---
