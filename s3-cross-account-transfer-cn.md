@@ -166,10 +166,10 @@
 ### S3 批量操作
 | 项目 | 值 |
 |------|-----|
-| 作业 ID | `64d1c633-c4ab-46e8-9906-dbe499ee6af5` |
+| 作业 ID | `00000000-0000-0000-0000-000000000001` |
 | 区域 | ap-northeast-1 |
-| 源 | ss-cross-acct-test (账户 767397876447) |
-| 目标 | ss-cross-acct-accept (账户 127214164714) |
+| 源 | source-bucket (账户 111111111111) |
+| 目标 | dest-bucket (账户 222222222222) |
 | 状态 | ✅ 完成 (2/2 任务) |
 
 **关键经验：** 批量作业必须在源桶所在区域创建。
@@ -177,8 +177,8 @@
 ### S3 复制
 | 项目 | 值 |
 |------|-----|
-| 源 | ss-cross-acct-test (账户 767397876447) |
-| 目标 | ss-cross-acct-accept (账户 127214164714) |
+| 源 | source-bucket (账户 111111111111) |
+| 目标 | dest-bucket (账户 222222222222) |
 | 前缀 | `replicate/` |
 | 状态 | ✅ 已完成 |
 
@@ -187,9 +187,9 @@
 ### DataSync
 | 项目 | 值 |
 |------|-----|
-| 任务 ARN | `task-0467e69aaf92a1a2b` |
-| 源 | ss-cross-acct-test/datasync-test/ |
-| 目标 | ss-cross-acct-accept/datasync-dest/ |
+| 任务 ARN | `task-0abc1234567890def` |
+| 源 | source-bucket/datasync-test/ |
+| 目标 | dest-bucket/datasync-dest/ |
 | 状态 | ✅ 成功 (1 文件, 50 字节) |
 
 **关键经验：** DataSync 角色需要 `s3:DeleteObject` 权限；会创建 `.aws-datasync/` 元数据文件夹。
@@ -197,15 +197,15 @@
 ### 网关终端节点
 | 项目 | 值 |
 |------|-----|
-| 终端节点 ID | vpce-00df0cd8226408340 |
-| VPC | vpc-0ca8540233182736a |
+| 终端节点 ID | vpce-0gw12345678901234 |
+| VPC | vpc-0abc1234567890def |
 | 状态 | ✅ 可用 |
 
 ### 接口终端节点
 | 项目 | 值 |
 |------|-----|
-| 终端节点 ID | vpce-042a2b36f62dbd782 |
-| ENI IP | 10.0.0.93 |
+| 终端节点 ID | vpce-0if12345678901234 |
+| ENI IP | 10.0.0.100 |
 | 状态 | ✅ 可用 |
 
 ---
